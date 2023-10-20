@@ -5,7 +5,7 @@ const LayoutContainer = ({ children }) => {
   return (
     <div>
       <NavBar />
-      <div className="bg-gray-300">{children}</div>
+      <div className="bg-bg-body h-body-height">{children}</div>
     </div>
   );
 };
