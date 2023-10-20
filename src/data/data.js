@@ -1,23 +1,23 @@
-export const graphData = [
+export const graphInsightsData = [
   {
-    id: 1,
-    group: "Male",
+    _id: 1,
+    gender: "Male",
     clicks: 135,
     cost: 5421,
     conversions: 17,
     revenue: 21345,
   },
   {
-    id: 2,
-    group: "Female",
+    _id: 2,
+    gender: "Female",
     clicks: 256,
     cost: 9648,
     conversions: 29,
     revenue: 32198,
   },
   {
-    id: 3,
-    group: "Unknown",
+    _id: 3,
+    gender: "Unknown",
     clicks: 178,
     cost: 2985,
     conversions: 8,
@@ -25,8 +25,9 @@ export const graphData = [
   },
 ];
 
-export const tableData = [
+export const tableInsightsData = [
   {
+    _id: "1",
     campaigns: "Cosmetics",
     clicks: 712,
     cost: 4272,
@@ -34,6 +35,7 @@ export const tableData = [
     revenue: 16568,
   },
   {
+    _id: "2",
     campaigns: "Serums",
     clicks: 3961,
     cost: 27331,
@@ -41,6 +43,7 @@ export const tableData = [
     revenue: 362526,
   },
   {
+    _id: "3",
     campaigns: "Facewash",
     clicks: 9462,
     cost: 76831,
@@ -48,6 +51,7 @@ export const tableData = [
     revenue: 266800,
   },
   {
+    _id: "4",
     campaigns: "Shampoos",
     clicks: 439,
     cost: 2151,
@@ -55,6 +59,7 @@ export const tableData = [
     revenue: 11029,
   },
   {
+    _id: "5",
     campaigns: "Conditioners",
     clicks: 1680,
     cost: 3864,
@@ -62,6 +67,7 @@ export const tableData = [
     revenue: 175245,
   },
   {
+    _id: "6",
     campaigns: "FaceWash 2",
     clicks: 4978,
     cost: 29370,
