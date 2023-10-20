@@ -3,8 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      spacing: {
+        "body-height": "calc(100vh - 4.1rem)",
+      },
       fontSize: {
-        logo:"1.4rem"
+        logo: "1.4rem",
       },
       colors: {
         "custom-orange": "#ff823c",
@@ -13,6 +16,7 @@ export default {
         "light-text": "#989da2",
         "medium-text": "#686f76",
         "dark-text": "#333d47",
+        "bg-body": "#fafafa",
       },
       boxShadow: {
         "custom-md": "rgba(99, 99, 99, 0.2) 0px 2px 6px 0px",
