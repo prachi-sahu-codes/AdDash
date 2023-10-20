@@ -1,12 +1,18 @@
 import React from "react";
 import { LayoutContainer } from "../../layout";
-import { BasicTable } from "../../components/table/Table";
+import { BasicTable, DoughnutChart } from "../../components/index";
 
 const DashBoard = () => {
   return (
     <LayoutContainer>
-      <BasicTable />
-      <div>graph</div>
+      <div className="flex flex-wrap gap-4">
+        <div>
+          <BasicTable />
+        </div>
+        <div className="flex justify-center items-center">
+          <DoughnutChart />
+        </div>
+      </div>
     </LayoutContainer>
   );
 };
