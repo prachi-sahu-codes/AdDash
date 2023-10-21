@@ -6,8 +6,12 @@ export default {
       spacing: {
         "body-height": "calc(100vh - 4.1rem)",
       },
+      padding: {
+        "0.35rem": "0.35rem",
+      },
       fontSize: {
         logo: "1.4rem",
+        "1.1rem": "1.1rem",
       },
       colors: {
         "custom-orange": "#ff823c",

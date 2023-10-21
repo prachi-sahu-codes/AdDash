@@ -9,3 +9,15 @@
 .app {
   font-family: "Poppins", sans-serif;
 }
+
+.css-1f8o8r6-MuiPaper-root-MuiTableContainer-root {
+  box-shadow: none !important;
+}
+
+.removeBorder.css-1ff6gxb-MuiTableCell-root {
+  border-bottom: none !important;
+}
+
+.removeBorder.css-1ws11rh-MuiTableCell-root {
+  border-bottom: none !important;
+}
