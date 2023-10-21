@@ -1,7 +1,7 @@
 export const graphInsightsData = [
   {
     _id: 1,
-    gender: "Male",
+    group: "Male",
     clicks: 135,
     cost: 5421,
     conversions: 17,
@@ -9,7 +9,7 @@ export const graphInsightsData = [
   },
   {
     _id: 2,
-    gender: "Female",
+    group: "Female",
     clicks: 256,
     cost: 9648,
     conversions: 29,
@@ -17,7 +17,7 @@ export const graphInsightsData = [
   },
   {
     _id: 3,
-    gender: "Unknown",
+    group: "Unknown",
     clicks: 178,
     cost: 2985,
     conversions: 8,

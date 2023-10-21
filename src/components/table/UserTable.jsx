@@ -10,14 +10,16 @@ import { useSelector } from "react-redux";
 import { getTotal, formatTableData } from "../../utils/functions";
 import { SortIcon } from "../icons/SortIcon";
 
-export const BasicTable = () => {
-  const tableData = useSelector((state) => state?.dashboard?.tableData);
+export const UserTable = () => {
+  const tableData = useSelector((state) => state?.dashboard?.graphData);
   const [sortTable, setSortTable] = useState({
     isSort: false,
     sortLabel: "",
     isAsc: false,
     sortOrder: "",
   });
+
+  console.log(tableData);
 
   const keys = Object.keys(tableData[0]);
   const filteredKeys = formatTableData(keys);
@@ -31,7 +33,7 @@ export const BasicTable = () => {
               <TableCell key={item + index}>
                 <div
                   className={`flex items-center ${
-                    item === "Campaigns" ? "justify-start" : "justify-end"
+                    item === "Group" ? "justify-start" : "justify-end"
                   } gap-1 cursor-pointer text-dark-text font-semibold`}
                   onClick={() => {
                     setSortTable({
@@ -57,7 +59,7 @@ export const BasicTable = () => {
             >
               <TableCell component="th" scope="row">
                 <p className="text-medium-text">
-                  {row?.campaigns.toLocaleString()}
+                  {row?.group.toLocaleString()}
                 </p>
               </TableCell>
               <TableCell align="right">
@@ -82,28 +84,28 @@ export const BasicTable = () => {
               </TableCell>
             </TableRow>
           ))}
-          <TableRow>
-            <TableCell className="removeBorder">
+          <TableRow className="bg-bg-body">
+            <TableCell>
               <p className="text-medium-text">Total</p>
             </TableCell>
-            <TableCell align="right" className="removeBorder">
+            <TableCell align="right">
               <p className="text-medium-text">
-                {getTotal(tableData, "clicks").toLocaleString()}
+                {getTotal(tableData, "clicks")?.toLocaleString()}
               </p>
             </TableCell>
-            <TableCell className="removeBorder" align="right">
+            <TableCell align="right">
               <p className="text-medium-text">
-                USD {getTotal(tableData, "cost").toLocaleString()}
+                USD {getTotal(tableData, "cost")?.toLocaleString()}
               </p>
             </TableCell>
-            <TableCell className="removeBorder" align="right">
+            <TableCell align="right">
               <p className="text-medium-text">
-                {getTotal(tableData, "conversions").toLocaleString()}
+                {getTotal(tableData, "conversions")?.toLocaleString()}
               </p>
             </TableCell>
-            <TableCell className="removeBorder" align="right">
+            <TableCell align="right">
               <p className="text-medium-text">
-                USD {getTotal(tableData, "revenue").toLocaleString()}
+                USD {getTotal(tableData, "revenue")?.toLocaleString()}
               </p>
             </TableCell>
           </TableRow>

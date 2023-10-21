@@ -21,19 +21,21 @@ export const DoughnutChart = () => {
   const options = {
     plugins: {
       legend: {
-        display: false, // Hide the default legend
+        display: false,
       },
     },
   };
-  data.datasets[0].cutout = 84;
+
+  // data.datasets[0].cutout = 84;
+
   return (
-    <div className="flex justify-between items-center gap-14 h-full">
-      <div className=" relative w-72 h-72">
+    <div className="flex justify-between items-center gap-12 h-full">
+      <div className=" relative w-52 h-52 md:w-72 md:h-72 mt-6">
         <Doughnut data={data} options={options} />
       </div>
       <div className="flex flex-col">
         {data.labels.map((label, index) => (
-          <div className="flex items-center m-4" key={index}>
+          <div className="flex items-center m-3" key={index}>
             <div
               style={{
                 backgroundColor: data.datasets[0].backgroundColor[index],
