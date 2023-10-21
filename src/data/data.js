@@ -68,7 +68,7 @@ export const tableInsightsData = [
   },
   {
     _id: "6",
-    campaigns: "FaceWash 2",
+    campaigns: "Facewash 2",
     clicks: 4978,
     cost: 29370,
     conversions: 189,

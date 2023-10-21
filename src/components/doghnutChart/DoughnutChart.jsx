@@ -25,23 +25,22 @@ export const DoughnutChart = () => {
       },
     },
   };
-  data.datasets[0].cutout = 80;
+  data.datasets[0].cutout = 84;
   return (
-    <div className="flex justify-between items-center gap-3 relative w-72 h-72">
-      <Doughnut data={data} options={options} />
-      <div
-        className="flex flex-col"
-      >
+    <div className="flex justify-between items-center gap-14 h-full">
+      <div className=" relative w-72 h-72">
+        <Doughnut data={data} options={options} />
+      </div>
+      <div className="flex flex-col">
         {data.labels.map((label, index) => (
-          <div className="flex">
+          <div className="flex items-center m-4" key={index}>
             <div
-              key={index}
               style={{
                 backgroundColor: data.datasets[0].backgroundColor[index],
                 borderRadius: "5px",
-                width: "60px",
-                height: "17px",
-                marginRight: "10px",
+                width: "55px",
+                height: "16px",
+                marginRight: "20px",
               }}
             ></div>
             <span>{label}</span>
