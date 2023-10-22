@@ -23,6 +23,7 @@ export default {
         "bg-body": "#fafafa",
       },
       boxShadow: {
+        "custom-sm": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         "custom-md": "rgba(99, 99, 99, 0.2) 0px 2px 6px 0px",
       },
     },

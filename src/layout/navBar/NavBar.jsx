@@ -15,7 +15,7 @@ const NavBar = () => {
           Dashboard
         </NavLink>
         <NavLink
-          to="/createAds"
+          to="/createAd"
           className="font-medium text-1.1rem hover:text-black active:text-medium-text transition-colors"
         >
           Create Ads

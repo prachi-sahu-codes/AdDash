@@ -5,7 +5,9 @@ const LayoutContainer = ({ children }) => {
   return (
     <div>
       <NavBar />
-      <div className="bg-bg-body h-body-height p-7">{children}</div>
+      <div className="min-h-body-height h-full p-7">
+        {children}
+      </div>
     </div>
   );
 };
