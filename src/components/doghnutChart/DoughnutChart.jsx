@@ -2,6 +2,7 @@ import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { useSelector } from "react-redux";
+import { getTotal } from "../../utils/functions";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -16,12 +17,19 @@ export const DoughnutChart = ({ labelSelected }) => {
   };
 
   const labelData = graphData.map((obj) => obj[labelSelected]);
+  const labelTitle = " Number of " + labelSelected;
+
+  const totalValue = getTotal(graphData, labelSelected);
+  const percentageLabel = graphData.map(
+    (obj) =>
+      Math.round((obj[labelSelected] / totalValue) * 100) + "% of " + obj.group
+  );
 
   const data = {
-    labels: ["Males", "Females", "Unknown"],
+    labels: percentageLabel,
     datasets: [
       {
-        label: "# of Votes",
+        label: labelTitle,
         data: labelData,
         backgroundColor: ["#ff823c", "#0096ff", "#323c46"],
         borderColor: ["#fff"],
