@@ -1,7 +1,13 @@
 import React from "react";
+import { LayoutContainer } from "../../layout";
+import { ComponentContainer } from "../../components";
 
 const MediaAd = () => {
-  return <div>MediaAd</div>;
+  return (
+    <LayoutContainer>
+      <ComponentContainer title="Create Text & Media"></ComponentContainer>
+    </LayoutContainer>
+  );
 };
 
 export default MediaAd;
