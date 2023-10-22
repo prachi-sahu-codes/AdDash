@@ -69,12 +69,11 @@ const CreateAd = () => {
 
         <div className="flex justify-end m-4">
           <button
-            type="button"
             className={`${
               adSelected.length > 0
-                ? "bg-custom-blue text-white"
-                : "bg-gray-200 text-medium-text"
-            } py-3 px-16 text-sm font-semibold rounded`}
+                ? "bg-custom-blue text-white hover:bg-custom-blue-dark active:bg-custom-blue"
+                : "bg-gray-200 text-medium-text cursor-not-allowed"
+            } py-2 px-14 text-sm font-semibold rounded`}
             onClick={buttonHandler}
             disabled={adSelected.length < 0}
           >

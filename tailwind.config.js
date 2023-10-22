@@ -15,8 +15,9 @@ export default {
       },
       colors: {
         "custom-orange": "#ff823c",
-        "custom-blue": "#0096ff",
         "custom-gray": "#323c46",
+        "custom-blue": "#0096ff",
+        "custom-blue-dark": "#0187e7",
         "light-text": "#989da2",
         "medium-text": "#686f76",
         "dark-text": "#333d47",
