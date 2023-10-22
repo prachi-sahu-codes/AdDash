@@ -11,13 +11,24 @@ import { getTotal, formatTableData } from "../../utils/functions";
 import { SortIcon } from "../icons/SortIcon";
 
 export const ProductTable = () => {
-  const tableData = useSelector((state) => state?.dashboard?.tableData);
+  const productData = useSelector((state) => state?.dashboard?.tableData);
   const [sortTable, setSortTable] = useState({
     isSort: false,
     sortLabel: "",
     isAsc: false,
     sortOrder: "",
   });
+
+  const tableData = sortTable?.sortOrder
+    ? [...productData]?.sort((a, b) => {
+        const label = sortTable?.sortLabel.toLowerCase();
+        if (sortTable?.sortOrder !== "asc") {
+          return b[label] > a[label] ? 1 : -1;
+        } else {
+          return a[label] > b[label] ? 1 : -1;
+        }
+      })
+    : productData;
 
   const keys = Object.keys(tableData[0]);
   const filteredKeys = formatTableData(keys);

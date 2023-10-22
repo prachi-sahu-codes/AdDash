@@ -11,7 +11,7 @@ import { getTotal, formatTableData } from "../../utils/functions";
 import { SortIcon } from "../icons/SortIcon";
 
 export const UserTable = () => {
-  const tableData = useSelector((state) => state?.dashboard?.graphData);
+  const graphData = useSelector((state) => state?.dashboard?.graphData);
   const [sortTable, setSortTable] = useState({
     isSort: false,
     sortLabel: "",
@@ -19,7 +19,16 @@ export const UserTable = () => {
     sortOrder: "",
   });
 
-  console.log(tableData);
+  const tableData = sortTable?.sortOrder
+    ? [...graphData]?.sort((a, b) => {
+        const label = sortTable?.sortLabel.toLowerCase();
+        if (sortTable?.sortOrder !== "asc") {
+          return b[label] > a[label] ? 1 : -1;
+        } else {
+          return a[label] > b[label] ? 1 : -1;
+        }
+      })
+    : graphData;
 
   const keys = Object.keys(tableData[0]);
   const filteredKeys = formatTableData(keys);
