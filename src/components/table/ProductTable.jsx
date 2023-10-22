@@ -13,7 +13,6 @@ import { SortIcon } from "../icons/SortIcon";
 export const ProductTable = () => {
   const productData = useSelector((state) => state?.dashboard?.tableData);
   const [sortTable, setSortTable] = useState({
-    isSort: false,
     sortLabel: "",
     isAsc: false,
     sortOrder: "",
@@ -46,7 +45,6 @@ export const ProductTable = () => {
                   } gap-1 cursor-pointer text-dark-text font-semibold`}
                   onClick={() => {
                     setSortTable({
-                      isSort: true,
                       sortLabel: item,
                       isAsc: !sortTable.isAsc,
                       sortOrder: sortTable.isAsc ? "asc" : "dsc",
