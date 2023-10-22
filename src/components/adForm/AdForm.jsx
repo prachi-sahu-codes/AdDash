@@ -211,7 +211,7 @@ export const AdForm = ({ adType, setShowModal, isMedia }) => {
         />
       </div>
 
-      <div className={`flex justify-end gap-5 ${isMedia ? "" : "lg:pt-48"}`}>
+      <div className={`flex justify-end gap-5 ${isMedia ? "" : "lg:pt-20"}`}>
         <button
           className="bg-bg-body hover:bg-gray-200 active:bg-bg-body text-dark-text py-2 px-14 text-sm font-semibold rounded border-2"
           onClick={() => navigate(-1)}

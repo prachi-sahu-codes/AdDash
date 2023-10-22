@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { LayoutContainer } from "../../layout";
-import { AdForm, ComponentContainer } from "../../components";
+import { AdForm, ComponentContainer, SuccessModal } from "../../components";
 
 const TextAd = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
-    <LayoutContainer>
-      <ComponentContainer title="Create Text & Media">
-        <AdForm />
-      </ComponentContainer>
-    </LayoutContainer>
+    <div>
+      <LayoutContainer>
+        <ComponentContainer title="Create Text & Media">
+          <AdForm setShowModal={setShowModal} />
+        </ComponentContainer>
+      </LayoutContainer>
+      {showModal && <SuccessModal />}
+    </div>
   );
 };
 
