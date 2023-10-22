@@ -43,7 +43,9 @@ const DashBoard = () => {
                 <DoughnutChart labelSelected={labelSelected} />
               </div>
             ) : (
-              <UserTable />
+              <div className="pb-16 sm:pb-14 ">
+                <UserTable />
+              </div>
             )}
 
             <div className="block mr-5 mb-5 ml-auto">

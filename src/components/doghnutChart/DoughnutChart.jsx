@@ -41,23 +41,20 @@ export const DoughnutChart = ({ labelSelected }) => {
   // data.datasets[0].cutout = 84;
 
   return (
-    <div className="flex justify-between items-center gap-12 h-full">
-      <div className=" relative w-52 h-52 md:w-72 md:h-72 mt-6">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-12 h-full">
+      <div className="relative w-52 h-52 md:w-72 md:h-72 mt-6">
         <Doughnut data={data} options={options} />
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col mb-14 sm:mb-0">
         {data.labels.map((label, index) => (
-          <div className="flex items-center m-3" key={index}>
+          <div className="flex items-center m-2 md:m-3" key={index}>
             <div
+              className="rounded w-[55px] h-[16px] mr-[20px]"
               style={{
                 backgroundColor: data.datasets[0].backgroundColor[index],
-                borderRadius: "5px",
-                width: "55px",
-                height: "16px",
-                marginRight: "20px",
               }}
             ></div>
-            <span>{label}</span>
+            <span className="text-sm md:text-base">{label}</span>
           </div>
         ))}
       </div>

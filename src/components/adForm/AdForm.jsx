@@ -35,7 +35,6 @@ export const AdForm = ({ adType, setShowModal, isMedia }) => {
       setShowModal(false);
       navigate(-1);
     }, 600);
-    console.log("clicked");
   };
 
   return (
@@ -211,7 +210,11 @@ export const AdForm = ({ adType, setShowModal, isMedia }) => {
         />
       </div>
 
-      <div className={`flex justify-end gap-5 ${isMedia ? "" : "lg:pt-20"}`}>
+      <div
+        className={`flex flex-col mt-5 430px:mt-0 430px:flex-row 430px:justify-end gap-5 ${
+          isMedia ? "" : "lg:pt-20"
+        }`}
+      >
         <button
           className="bg-bg-body hover:bg-gray-200 active:bg-bg-body text-dark-text py-2 px-14 text-sm font-semibold rounded border-2"
           onClick={() => navigate(-1)}

@@ -8,7 +8,7 @@ export const ComponentContainer = ({ title, ele, border, children }) => {
           border && "border-b-2"
         }`}
       >
-        {title}
+        <p className="text-base 430px:text-lg">{title}</p>
         {ele}
       </div>
       <div className="h-full">{children}</div>

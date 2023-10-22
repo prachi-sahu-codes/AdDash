@@ -9,7 +9,7 @@ export const DoughnutHeader = ({ setLabelSelected }) => {
   const filteredKeys = formatTableData(keys).filter((key) => key !== "Group");
 
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-3 sm:gap-5">
       <select
         className="text-sm font-medium text-medium-text border-2 rounded px-1 focus:outline-none focus:border-custom-blue"
         onChange={(e) => setLabelSelected(e.target.value)}

@@ -27,6 +27,10 @@ export default {
         "custom-sm": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         "custom-md": "rgba(99, 99, 99, 0.2) 0px 2px 6px 0px",
       },
+      screens: {
+        "430px":"430px",
+        "860px": "860px",
+      },
     },
   },
   plugins: [],
