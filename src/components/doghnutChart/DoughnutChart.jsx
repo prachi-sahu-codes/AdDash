@@ -1,29 +1,33 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { useSelector } from "react-redux";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
-  labels: ["Males", "Females", "Unknown"],
-  datasets: [
-    {
-      label: "# of Votes",
-      data: [12, 19, 5],
-      backgroundColor: ["#ff823c", "#0096ff", "#323c46"],
-      borderColor: ["#fff"],
-      borderWidth: 7,
-    },
-  ],
-};
-
-export const DoughnutChart = () => {
+export const DoughnutChart = ({ labelSelected }) => {
+  const graphData = useSelector((state) => state?.dashboard?.graphData);
   const options = {
     plugins: {
       legend: {
         display: false,
       },
     },
+  };
+
+  const labelData = graphData.map((obj) => obj[labelSelected]);
+
+  const data = {
+    labels: ["Males", "Females", "Unknown"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: labelData,
+        backgroundColor: ["#ff823c", "#0096ff", "#323c46"],
+        borderColor: ["#fff"],
+        borderWidth: 7,
+      },
+    ],
   };
 
   // data.datasets[0].cutout = 84;

@@ -6,6 +6,7 @@ import { ComponentContainer } from "./componentContainer/ComponentContainer";
 import { Toggle } from "./toggle/Toggle";
 import { AdForm } from "./adForm/AdForm";
 import { SuccessModal } from "./modal/SuccessModal";
+import { DoughnutHeader } from "./doughnutHeader/DoughnutHeader";
 
 export {
   ProductTable,
@@ -16,4 +17,5 @@ export {
   UserTable,
   AdForm,
   SuccessModal,
+  DoughnutHeader,
 };
