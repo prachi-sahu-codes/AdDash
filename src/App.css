@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   padding: 0;
@@ -7,11 +7,12 @@
 }
 
 .app {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .css-1f8o8r6-MuiPaper-root-MuiTableContainer-root {
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .removeBorder.css-1ff6gxb-MuiTableCell-root {

@@ -36,7 +36,7 @@ const CreateAd = () => {
       <ComponentContainer title="Create Ads">
         <div className="w-full h-full flex flex-col sm:flex-row items-center justify-center gap-3 860px:gap-14">
           <div
-            className="w-56 sm:w-72 border-4 border-solid border-white m-4 rounded-md shadow-custom-sm"
+            className="w-56 sm:w-72 border-4 border-solid border-white m-4 rounded-md shadow-custom-sm cursor-pointer"
             onClick={() => checkboxHandler("textAd")}
           >
             <Checkbox
@@ -52,7 +52,7 @@ const CreateAd = () => {
             </div>
           </div>
           <div
-            className="w-56 sm:w-72 border-4 border-solid border-white m-4 rounded-md shadow-custom-sm"
+            className="w-56 sm:w-72 border-4 border-solid border-white m-4 rounded-md shadow-custom-sm cursor-pointer"
             onClick={() => checkboxHandler("mediaAd")}
           >
             <Checkbox

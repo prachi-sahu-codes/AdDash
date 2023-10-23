@@ -54,7 +54,7 @@ export const DoughnutChart = ({ labelSelected }) => {
                 backgroundColor: data.datasets[0].backgroundColor[index],
               }}
             ></div>
-            <span className="text-sm md:text-base">{label}</span>
+            <span className="text-sm md:text-base font-medium">{label}</span>
           </div>
         ))}
       </div>
