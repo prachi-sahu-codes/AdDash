@@ -33,7 +33,7 @@ export const ProductTable = () => {
   const filteredKeys = formatTableData(keys);
 
   return (
-    <TableContainer component={Paper} sx={{ width: "100%" }}>
+    <TableContainer component={Paper} sx={{ width: "100%" }} className="removeShadow">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>

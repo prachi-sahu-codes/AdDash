@@ -10,16 +10,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.css-1f8o8r6-MuiPaper-root-MuiTableContainer-root {
+.removeShadow {
   box-shadow: none !important;
   border-radius: 0 !important;
 }
 
-.removeBorder.css-1ff6gxb-MuiTableCell-root {
+.removeBorder {
   border-bottom: none !important;
 }
 
-.removeBorder.css-1ws11rh-MuiTableCell-root {
+.removeBorder {
   border-bottom: none !important;
 }
 
