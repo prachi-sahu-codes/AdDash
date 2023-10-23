@@ -33,7 +33,11 @@ export const ProductTable = () => {
   const filteredKeys = formatTableData(keys);
 
   return (
-    <TableContainer component={Paper} sx={{ width: "100%" }} className="removeShadow">
+    <TableContainer
+      component={Paper}
+      sx={{ width: "100%", boxShadow: "none" }}
+      className="removeShadow"
+    >
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -92,25 +96,25 @@ export const ProductTable = () => {
             </TableRow>
           ))}
           <TableRow className="bg-bg-body">
-            <TableCell className="removeBorder">
+            <TableCell sx={{ borderBottom: "none" }}>
               <p className="text-medium-text">Total</p>
             </TableCell>
-            <TableCell align="right" className="removeBorder">
+            <TableCell sx={{ borderBottom: "none" }} align="right">
               <p className="text-medium-text">
                 {getTotal(tableData, "clicks").toLocaleString()}
               </p>
             </TableCell>
-            <TableCell className="removeBorder" align="right">
+            <TableCell sx={{ borderBottom: "none" }} align="right">
               <p className="text-medium-text">
                 USD {getTotal(tableData, "cost").toLocaleString()}
               </p>
             </TableCell>
-            <TableCell className="removeBorder" align="right">
+            <TableCell sx={{ borderBottom: "none" }} align="right">
               <p className="text-medium-text">
                 {getTotal(tableData, "conversions").toLocaleString()}
               </p>
             </TableCell>
-            <TableCell className="removeBorder" align="right">
+            <TableCell sx={{ borderBottom: "none" }} align="right">
               <p className="text-medium-text">
                 USD {getTotal(tableData, "revenue").toLocaleString()}
               </p>

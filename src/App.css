@@ -10,19 +10,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.removeShadow {
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-.removeBorder {
-  border-bottom: none !important;
-}
-
-.removeBorder {
-  border-bottom: none !important;
-}
-
 .centerModal {
   position: absolute;
   top: 50%;
